@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TheAdsGuru | Advertising & Marketing Agency</title>
+
+    <meta name="description" content="TheAdsGuru is an advertising and marketing agency helping businesses generate leads, increase sales and grow online through performance marketing.">
+
+    <meta name="keywords" content="TheAdsGuru, advertising agency, marketing agency, Meta Ads, Snapchat Ads, lead generation, performance marketing, Shopify">
+
+    <meta name="theme-color" content="#050505">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050505;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =========================
+           COLORS
+        ========================= */
+
+        :root {
+            --gold: #f8c43a;
+            --gold-light: #ffe27a;
+            --blue: #27c8ee;
+            --blue-dark: #086bba;
+            --white: #ffffff;
+            --gray: #a7a7a7;
+            --card: #101010;
+            --border: rgba(255,255,255,0.09);
+        }
+
+        /* =========================
+           BACKGROUND EFFECT
+        ========================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(
+                circle,
+                rgba(22, 139, 205, 0.12),
+                transparent 65%
+            );
+            top: -250px;
+            left: -200px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(
+                circle,
+                rgba(248,196,58,0.07),
+                transparent 65%
+            );
+            right: -250px;
+            bottom: -250px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: rgba(5,5,5,0.82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        nav {
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 175px;
+            max-height: 62px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #f8c43a, #ffdc65);
+            color: #080808 !important;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(248,196,58,0.25);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 110px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(248,196,58,0.3);
+            background: rgba(248,196,58,0.06);
+            padding: 8px 14px;
+            border-radius: 50px;
+            color: var(--gold-light);
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .badge span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #30d158;
+            box-shadow: 0 0 10px #30d158;
+        }
+
+        .hero h1 {
+            font-size: clamp(44px, 6vw, 76px);
+            line-height: 1.04;
+            letter-spacing: -3px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 .gold {
+            color: var(--gold);
+        }
+
+        .hero h1 .blue {
+            color: var(--blue);
+        }
+
+        .hero-text {
+            color: #b7b7b7;
+            max-width: 650px;
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f8c43a, #ffdc65);
+            color: #050505;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(248,196,58,0.25);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 15px 25px;
+            border-radius: 8px;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+
+        /* HERO VISUAL */
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-circle {
+            width: 430px;
+            height: 430px;
+            border-radius: 50%;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(32,180,220,0.18),
+                    rgba(5,5,5,0) 68%
+                );
+            border: 1px solid rgba(39,200,238,0.13);
+            position: relative;
+        }
+
+        .hero-logo {
+            position: absolute;
+            inset: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo img {
+            width: 100%;
+            max-width: 360px;
+            filter: drop-shadow(0 0 35px rgba(39,200,238,0.18));
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(15,15,15,0.92);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 18px;
+            border-radius: 12px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+        }
+
+        .floating-card strong {
+            display: block;
+            font-size: 18px;
+        }
+
+        .floating-card small {
+            color: #999;
+        }
+
+        .card-one {
+            left: -5px;
+            top: 60px;
+        }
+
+        .card-two {
+            right: -10px;
+            bottom: 65px;
+        }
+
+        .card-icon {
+            color: var(--gold);
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 55px;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: #999;
+            font-size: 16px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .service-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.055),
+                    rgba(255,255,255,0.015)
+                );
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 16px;
+            transition: 0.35s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(39,200,238,0.07);
+            top: -50px;
+            right: -50px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(39,200,238,0.35);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(39,200,238,0.09);
+            border: 1px solid rgba(39,200,238,0.15);
+            color: var(--blue);
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #929292;
+            font-size: 14px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: linear-gradient(
+                180deg,
+                transparent,
+                rgba(255,255,255,0.015),
+                transparent
+            );
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-box {
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 45px;
+            background: #0b0b0b;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-box::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(248,196,58,0.07);
+            filter: blur(50px);
+            right: -100px;
+            top: -100px;
+        }
+
+        .about-box img {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-content .section-label {
+            text-align: left;
+        }
+
+        .about-content h2 {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #999;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 13px;
+            color: #ddd;
+        }
+
+        .check-list li span {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .process-card {
+            padding: 30px 24px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: #0b0b0b;
+        }
+
+        .process-number {
+            font-size: 42px;
+            color: rgba(248,196,58,0.25);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* =========================
+           INDUSTRIES
+        ========================= */
+
+        .industries {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .industry {
+            border: 1px solid var(--border);
+            background: #0c0c0c;
+            padding: 13px 20px;
+            border-radius: 50px;
+            color: #ccc;
+            transition: 0.3s;
+        }
+
+        .industry:hover {
+            color: var(--gold);
+            border-color: rgba(248,196,58,0.35);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta-box {
+            position: relative;
+            overflow: hidden;
+            padding: 75px 40px;
+            border-radius: 25px;
+            text-align: center;
+            border: 1px solid rgba(39,200,238,0.2);
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(39,200,238,0.1),
+                    transparent 60%
+                ),
+                #0a0a0a;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(32px, 4vw, 52px);
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: #999;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 45px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        .footer-logo img {
+            width: 180px;
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            color: #777;
+            font-size: 14px;
+            max-width: 350px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 9px;
+            transition: 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        .whatsapp svg {
+            width: 31px;
+            height: 31px;
+            fill: white;
+        }
+
+        .whatsapp-label {
+            position: fixed;
+            right: 92px;
+            bottom: 34px;
+            background: #111;
+            color: white;
+            padding: 8px 13px;
+            border-radius: 7px;
+            font-size: 12px;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .whatsapp:hover + .whatsapp-label {
+            opacity: 1;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 82px;
+                left: 0;
+                width: 100%;
+                background: #080808;
+                flex-direction: column;
+                padding: 25px;
+                gap: 20px;
+                display: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 130px;
+                padding-bottom: 60px;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .hero-circle {
+                width: 330px;
+                height: 330px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 92%;
+            }
+
+            nav {
+                height: 72px;
+            }
+
+            .logo img {
+                width: 145px;
+            }
+
+            .nav-links {
+                top: 72px;
+            }
+
+            .hero {
+                padding-top: 105px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+                letter-spacing: -2px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .hero-circle {
+                width: 280px;
+                height: 280px;
+            }
+
+            .hero-logo {
+                inset: 35px;
+            }
+
+            .floating-card {
+                padding: 10px 12px;
+            }
+
+            .card-one {
+                left: -5px;
+                top: 30px;
+            }
+
+            .card-two {
+                right: -5px;
+                bottom: 25px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box {
+                padding: 25px;
+            }
+
+            .about-content h2 {
+                font-size: 35px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                padding: 55px 22px;
+            }
+
+            .whatsapp {
+                width: 55px;
+                height: 55px;
+                right: 16px;
+                bottom: 16px;
+            }
+
+            .whatsapp-label {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="TheAdsGuru Logo">
+            </a>
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#home">Home</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#about">About</a>
+
+                <a href="#process">Process</a>
+
+                <a href="#contact" class="nav-btn">
+                    Get Started
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div>
+
+                <div class="badge">
+                    <span></span>
+                    Performance-Driven Marketing Agency
+                </div>
+
+                <h1>
+                    Grow Your Brand.
+                    <span class="gold">Generate Leads.</span>
+                    <span class="blue">Scale Faster.</span>
+                </h1>
+
+                <p class="hero-text">
+                    TheAdsGuru is an advertising and marketing agency
+                    helping businesses build visibility, generate quality
+                    leads and grow through performance-driven digital marketing.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        class="btn-primary"
+                        href="https://wa.me/919209907882?text=Hi%20TheAdsGuru,%20I%20am%20interested%20in%20your%20advertising%20and%20marketing%20services.%20Please%20share%20more%20details."
+                        target="_blank"
+                    >
+                        Get Free Consultation →
+                    </a>
+
+                    <a class="btn-secondary" href="#services">
+                        Explore Services
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-circle">
+
+                    <div class="hero-logo">
+
+                        <img
+                            src="logo.png"
+                            alt="TheAdsGuru Advertising and Marketing Agency"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card card-one">
+
+                    <div class="card-icon">↗</div>
+
+                    <strong>Lead Generation</strong>
+
+                    <small>Performance Focused</small>
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <div class="card-icon">◉</div>
+
+                    <strong>Digital Growth</strong>
+
+                    <small>Built For Scale</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                What We Do
+            </div>
+
+            <h2>
+                Digital Marketing That
+                <span class="gold">Drives Results</span>
+            </h2>
+
+            <p>
+                We combine advertising, strategy and creative execution
+                to help businesses reach the right audience and grow online.
+            </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">📈</div>
+
+                <h3>Meta Ads</h3>
+
+                <p>
+                    Strategic Facebook and Instagram advertising campaigns
+                    focused on reach, leads, conversions and business growth.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🎯</div>
+
+                <h3>Lead Generation</h3>
+
+                <p>
+                    Build targeted lead generation campaigns designed to
+                    connect your business with potential customers.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">⚡</div>
+
+                <h3>Performance Marketing</h3>
+
+                <p>
+                    Data-driven campaigns focused on improving performance,
+                    controlling costs and scaling what works.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">👻</div>
+
+                <h3>Snapchat Ads</h3>
+
+                <p>
+                    Reach younger audiences and create awareness and lead
+                    generation campaigns through Snapchat advertising.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🛒</div>
+
+                <h3>E-commerce Marketing</h3>
+
+                <p>
+                    Marketing strategies for online stores designed to
+                    increase traffic, enquiries and conversions.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🚀</div>
+
+                <h3>Growth Strategy</h3>
+
+                <p>
+                    A practical marketing roadmap covering audience,
+                    creative, advertising and campaign scaling.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="about-box">
+
+                <img
+                    src="logo.png"
+                    alt="TheAdsGuru"
+                >
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="section-label">
+                    About TheAdsGuru
+                </div>
+
+                <h2>
+                    Marketing Built Around
+                    <span class="blue">Business Growth.</span>
+                </h2>
+
+                <p>
+                    TheAdsGuru is an advertising and marketing agency
+                    focused on helping businesses establish a stronger
+                    digital presence and generate meaningful opportunities.
+                </p>
+
+                <p>
+                    From campaign strategy and audience research to
+                    advertising and lead generation, we focus on creating
+                    marketing systems that are practical, measurable and
+                    scalable.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        <span>✓</span>
+                        Strategy-driven campaigns
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Data-focused advertising
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Targeted audience approach
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        Continuous campaign optimization
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section id="process">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Our Process
+            </div>
+
+            <h2>
+                From Strategy To
+                <span class="gold">Growth</span>
+            </h2>
+
+            <p>
+                A simple process designed to understand your business,
+                launch the right campaigns and improve performance.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>Understand</h3>
+
+                <p>
+                    We understand your business, audience, goals and
+                    current marketing challenges.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>Strategize</h3>
+
+                <p>
+                    We develop an advertising and marketing strategy
+                    around your specific business objectives.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>Launch</h3>
+
+                <p>
+                    Campaigns, creatives and targeting are implemented
+                    across the relevant advertising platforms.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>Optimize</h3>
+
+                <p>
+                    We analyse campaign data and continuously improve
+                    performance based on real results.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INDUSTRIES
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Industries
+            </div>
+
+            <h2>
+                Helping Different Businesses
+                <span class="blue">Grow Online</span>
+            </h2>
+
+            <p>
+                Our marketing strategies can be adapted according to
+                the business model, audience and growth objectives.
+            </p>
+
+        </div>
+
+
+        <div class="industries">
+
+            <div class="industry">E-commerce</div>
+
+            <div class="industry">Real Estate</div>
+
+            <div class="industry">Education</div>
+
+            <div class="industry">Healthcare</div>
+
+            <div class="industry">Local Businesses</div>
+
+            <div class="industry">Professional Services</div>
+
+            <div class="industry">Startups</div>
+
+            <div class="industry">D2C Brands</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="section-label">
+                Let's Work Together
+            </div>
+
+            <h2>
+                Ready To Grow Your
+                <span class="gold">Business?</span>
+            </h2>
+
+            <p>
+                Tell us about your business and marketing goals.
+                Let's discuss how TheAdsGuru can help you build
+                a stronger digital growth strategy.
+            </p>
+
+            <a
+                class="btn-primary"
+                href="https://wa.me/919209907882?text=Hi%20TheAdsGuru,%20I%20would%20like%20to%20discuss%20marketing%20and%20advertising%20for%20my%20business."
+                target="_blank"
+            >
+                Start a Conversation on WhatsApp →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <img
+                        src="logo.png"
+                        alt="TheAdsGuru"
+                    >
+
+                </div>
+
+                <p class="footer-text">
+                    TheAdsGuru is an advertising and marketing agency
+                    helping businesses grow through digital advertising,
+                    lead generation and performance marketing.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Quick Links</h4>
+
+                <a href="#home">Home</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#about">About</a>
+
+                <a href="#process">Process</a>
+
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <a
+                    href="https://wa.me/919209907882?text=Hi%20TheAdsGuru,%20I%20want%20to%20know%20more%20about%20your%20services."
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+                <a href="tel:+919209907882">
+                    +91 92090 97882
+                </a>
+
+                <a href="mailto:contact@theadsguru.in">
+                    contact@theadsguru.in
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © <span id="year"></span>
+            TheAdsGuru — Advertising & Marketing Agency.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919209907882?text=Hi%20TheAdsGuru,%20I%20am%20interested%20in%20your%20advertising%20and%20marketing%20services.%20Please%20share%20more%20details."
+    target="_blank"
+    aria-label="Chat with TheAdsGuru on WhatsApp"
+>
+
+    <svg viewBox="0 0 32 32">
+
+        <path d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.33-.79-.7-1.33-1.56-1.49-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+
+        <path d="M16.01 3.2c-7.06 0-12.8 5.73-12.8 12.8 0 2.26.59 4.47 1.72 6.41L3.12 28.8l6.55-1.72a12.76 12.76 0 0 0 6.34 1.67h.01c7.06 0 12.8-5.74 12.8-12.8S23.07 3.2 16.01 3.2zm0 23.4h-.01c-1.98 0-3.92-.53-5.61-1.53l-.4-.24-3.89 1.02 1.04-3.79-.26-.39a10.61 10.61 0 1 1 9.13 4.93z"/>
+
+    </svg>
+
+</a>
+
+<div class="whatsapp-label">
+    Chat on WhatsApp
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* Mobile Menu */
+
+    function toggleMenu() {
+
+        const menu = document.getElementById("navLinks");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            document
+                .getElementById("navLinks")
+                .classList.remove("active");
+
+        });
+
+    });
+
+
+    /* Automatic copyright year */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
