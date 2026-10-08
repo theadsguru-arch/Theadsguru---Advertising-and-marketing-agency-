@@ -675,9 +675,11 @@
 
     .result-image {
       width: 100%;
-      height: 310px;
-      object-fit: cover;
-      object-position: top center;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      object-position: center;
+      background: #080d15;
       user-select: none;
       -webkit-user-drag: none;
       pointer-events: none;
@@ -769,9 +771,10 @@
 
     .secondary-result img {
       width: 100%;
-      height: 230px;
-      object-fit: cover;
-      object-position: top center;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+      background: #080d15;
       user-select: none;
       -webkit-user-drag: none;
       pointer-events: none;
@@ -820,7 +823,8 @@
     @media (max-width: 600px) {
 
       .result-image {
-        height: 280px;
+        height: auto;
+        max-height: none;
       }
 
       .result-stats {
@@ -859,12 +863,17 @@
       }
 
       .nav-links {
-        gap: 10px;
+        gap: 12px;
         font-size: 11px;
+        flex-shrink: 1;
+        min-width: 0;
+        white-space: nowrap;
       }
 
+      /* Keep mobile navbar compact: Home, Results and Contact remain visible. */
       .nav-links a:nth-child(2),
-      .nav-links a:nth-child(4) {
+      .nav-links a:nth-child(4),
+      .nav-links a:nth-child(5) {
         display: none;
       }
 
