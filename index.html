@@ -646,6 +646,143 @@
     }
 
 
+
+
+    /* =========================
+       RESULTS / CAMPAIGN PERFORMANCE
+    ========================= */
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .result-card {
+      overflow: hidden;
+      padding: 0;
+      background: linear-gradient(145deg, var(--card), var(--card2));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .result-image-wrap {
+      position: relative;
+      overflow: hidden;
+      background: #080d15;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .result-image {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      object-position: top center;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+
+    .result-content {
+      padding: 20px;
+    }
+
+    .result-content h3 {
+      font-size: 18px;
+      margin-bottom: 13px;
+    }
+
+    .result-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .result-stat {
+      padding: 11px 8px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: rgba(255,255,255,0.025);
+      text-align: center;
+    }
+
+    .result-stat strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 15px;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .result-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.25;
+    }
+
+    .results-note {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .more-results {
+      margin-top: 28px;
+    }
+
+    .more-results summary {
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 17px;
+      border: 1px solid rgba(255,212,59,0.35);
+      border-radius: 7px;
+      color: var(--yellow);
+      font-weight: 800;
+      font-size: 13px;
+      background: rgba(255,212,59,0.045);
+    }
+
+    .more-results summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .more-results[open] summary {
+      margin-bottom: 20px;
+    }
+
+    .secondary-results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .secondary-result {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+
+    .secondary-result img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      object-position: top center;
+      user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+
+    .secondary-result p {
+      padding: 12px 13px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     /* =========================
        RESPONSIVE
     ========================= */
@@ -669,10 +806,34 @@
       .contact-grid {
         grid-template-columns: 1fr;
       }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .secondary-results-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
 
     @media (max-width: 600px) {
+
+      .result-image {
+        height: 280px;
+      }
+
+      .result-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .secondary-results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .secondary-result img {
+        height: auto;
+      }
 
       nav {
         min-height: 74px;
@@ -781,6 +942,8 @@
         <a href="#home">Home</a>
 
         <a href="#services">Services</a>
+
+        <a href="#results">Results</a>
 
         <a href="#founder">Founder</a>
 
@@ -1110,6 +1273,118 @@
     </section>
 
 
+
+
+
+    <!-- =========================
+         RESULTS / CAMPAIGN PERFORMANCE
+    ========================= -->
+
+    <section class="section" id="results">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Selected Campaign Results
+          </span>
+
+          <h2>
+            Campaign performance &amp; results
+          </h2>
+
+          <p>
+            Selected campaign results from previous advertising and lead
+            generation work. Performance can vary by campaign objective,
+            audience, budget, market conditions and platform environment.
+          </p>
+
+        </div>
+
+        <div class="results-grid">
+
+          <article class="card result-card">
+            <div class="result-image-wrap">
+              <img class="result-image" src="result-page-4.jpg"
+                   alt="TheAdsGuru campaign result showing 17K+ leads generated"
+                   loading="lazy" draggable="false">
+            </div>
+            <div class="result-content">
+              <h3>Lead Generation Campaign</h3>
+              <div class="result-stats">
+                <div class="result-stat"><strong>17K+</strong><span>Leads Generated</span></div>
+                <div class="result-stat"><strong>₹5.31</strong><span>Cost Per Lead</span></div>
+                <div class="result-stat"><strong>₹95K+</strong><span>Ad Spend</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card result-card">
+            <div class="result-image-wrap">
+              <img class="result-image" src="result-page-5.jpg"
+                   alt="TheAdsGuru campaign result showing 4K+ leads generated"
+                   loading="lazy" draggable="false">
+            </div>
+            <div class="result-content">
+              <h3>Lead Generation Campaign</h3>
+              <div class="result-stats">
+                <div class="result-stat"><strong>4K+</strong><span>Leads Generated</span></div>
+                <div class="result-stat"><strong>₹6.62</strong><span>Cost Per Lead</span></div>
+                <div class="result-stat"><strong>₹28K+</strong><span>Ad Spend</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card result-card">
+            <div class="result-image-wrap">
+              <img class="result-image" src="result-page-6.jpg"
+                   alt="TheAdsGuru campaign result showing 20K+ leads generated"
+                   loading="lazy" draggable="false">
+            </div>
+            <div class="result-content">
+              <h3>Lead Generation Campaign</h3>
+              <div class="result-stats">
+                <div class="result-stat"><strong>20K+</strong><span>Leads Generated</span></div>
+                <div class="result-stat"><strong>₹5.66</strong><span>Cost Per Lead</span></div>
+                <div class="result-stat"><strong>₹115K+</strong><span>Ad Spend</span></div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="results-note">
+          Results shown are selected campaign examples and are provided for
+          portfolio and informational purposes. They do not represent a
+          guarantee of future campaign performance.
+        </p>
+
+        <details class="more-results">
+          <summary>View More Campaign Results</summary>
+          <div class="secondary-results-grid">
+            <div class="secondary-result">
+              <img src="result-page-7.jpg" alt="Selected Ayurvedic Product lead generation campaign result" loading="lazy" draggable="false">
+              <p>Lead Generation — Ayurvedic Product campaigns</p>
+            </div>
+            <div class="secondary-result">
+              <img src="result-page-8.jpg" alt="Selected Chartered Accountant lead generation campaign result" loading="lazy" draggable="false">
+              <p>Lead Generation — Chartered Accountant campaigns</p>
+            </div>
+            <div class="secondary-result">
+              <img src="result-page-9.jpg" alt="Selected Blogger web traffic campaign result" loading="lazy" draggable="false">
+              <p>Web Traffic — Blogger campaigns</p>
+            </div>
+            <div class="secondary-result">
+              <img src="result-page-10.jpg" alt="Selected Telegram subscribers campaign result" loading="lazy" draggable="false">
+              <p>Telegram Subscribers campaigns</p>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+    </section>
 
     <!-- =========================
          FOUNDER
@@ -1649,7 +1924,7 @@
 
           <a
             class="btn"
-            href="https://wa.me/919209097882?text=Hi%20TheAdsGuru%2C%20I%20would%20like%20to%20discuss%20your%20advertising%20and%20marketing%20services."
+            href="https://wa.me/919209907882?text=Hi%20TheAdsGuru%2C%20I%20would%20like%20to%20discuss%20your%20advertising%20and%20marketing%20services."
             target="_blank"
             rel="noopener"
           >
@@ -2309,7 +2584,7 @@
             </strong>
 
             <a
-              href="https://wa.me/919209097882"
+              href="https://wa.me/919209907882"
               target="_blank"
               rel="noopener"
               style="color:var(--yellow);"
@@ -2388,6 +2663,10 @@
           Services
         </a>
 
+        <a href="#results">
+          Results
+        </a>
+
         <a href="#privacy">
           Privacy Policy
         </a>
@@ -2439,6 +2718,21 @@
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
+
+
+    /* Discourage casual image saving */
+
+    document.addEventListener("contextmenu", function(event) {
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+    });
+
+    document.addEventListener("dragstart", function(event) {
+      if (event.target.tagName === "IMG") {
+        event.preventDefault();
+      }
+    });
 
 
 
